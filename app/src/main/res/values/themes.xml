@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.Quietheart" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/blue</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.Quietheart.Main" parent="Base.Theme.Quietheart">
+        <item name="android:statusBarColor">@color/blue</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+
+    <style name="Theme.Quietheart.Second" parent="Base.Theme.Quietheart">
+        <item name="android:statusBarColor">@color/blue</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+
+    <style name="Theme.Quietheart.White" parent="Base.Theme.Quietheart">
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+
+    <style name="BottomNavigationView_NoAnimation" parent="@style/Widget.Design.BottomNavigationView">
+        <item name="android:theme">@style/NoAnimationBottomNavigationViewTheme</item>
+    </style>
+
+    <style name="NoAnimationBottomNavigationViewTheme">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+    </style>
+
+
+</resources>

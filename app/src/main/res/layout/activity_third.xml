@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:theme="@style/Theme.Quietheart.White">
+
+    <ImageView
+        android:id="@+id/heartMusicImageView"
+        android:layout_width="319.66dp"
+        android:layout_height="208dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_heart_music" />
+
+
+    <ImageView
+        android:id="@+id/kazka1ImageView"
+        android:layout_width="375dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="248dp"
+        android:src="@drawable/img_kazka1" />
+
+    <ImageView
+        android:id="@+id/knkazka1ImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="290dp"
+        android:src="@drawable/img_g"
+        android:clickable="true"
+        android:onClick="onImageClickSmihuha" />
+
+
+    <ImageView
+        android:id="@+id/kazka2ImageView"
+        android:layout_width="375dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="361dp"
+        android:src="@drawable/img_kazka2" />
+
+    <ImageView
+        android:id="@+id/knkazka2ImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="404dp"
+        android:src="@drawable/img_g"
+        android:clickable="true"
+        android:onClick="onImageClickNZH" />
+
+    <ImageView
+        android:id="@+id/kazka3ImageView"
+        android:layout_width="375dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="472dp"
+        android:src="@drawable/img_kazka3" />
+
+    <ImageView
+        android:id="@+id/knkazka3ImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="515dp"
+        android:src="@drawable/img_g"
+        android:clickable="true"
+        android:onClick="onImageClickMriynik" />
+
+    <TextView
+        android:id="@+id/timeTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manropeextrabold"
+        android:textSize="10sp"
+        android:textColor="@android:color/black"
+        android:layout_alignParentRight="true"
+        android:paddingTop="280dp"
+        android:paddingRight="50dp"
+        android:text="00:00" />
+
+
+    <TextView
+        android:id="@+id/timeTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manropeextrabold"
+        android:textSize="10sp"
+        android:textColor="@android:color/black"
+        android:layout_alignParentRight="true"
+        android:paddingTop="392dp"
+        android:paddingRight="50dp"
+        android:text="00:00" />
+
+    <TextView
+        android:id="@+id/timeTextView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manropeextrabold"
+        android:textSize="10sp"
+        android:textColor="@android:color/black"
+        android:layout_alignParentRight="true"
+        android:paddingTop="502dp"
+        android:paddingRight="50dp"
+        android:text="00:00" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>

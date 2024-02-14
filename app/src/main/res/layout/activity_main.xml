@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:theme="@style/Theme.Quietheart.Main">
+
+    <ImageView
+        android:id="@+id/tiheImageView"
+        android:layout_width="218dp"
+        android:layout_height="46dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="220dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_tihe" />
+
+
+
+    <ImageView
+        android:id="@+id/serceImageView"
+        android:layout_width="229dp"
+        android:layout_height="71dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="200dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_serce" />
+
+
+    <ImageView
+        android:id="@+id/heartImageView"
+        android:layout_width="246dp"
+        android:layout_height="227.81dp"
+        android:layout_centerInParent="true"
+        android:alpha="1.0"
+        android:clickable="true"
+        android:onClick="onHeartClick"
+        android:src="@drawable/img_heart" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="navigation_sec1" type="id" />
+    <item name="navigation_sec2" type="id" />
+    <item name="navigation_sec3" type="id" />
+    <item name="navigation_sec4" type="id" />
+</resources>

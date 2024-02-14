@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue"
+    android:theme="@style/Theme.Quietheart.Second">
+
+    <ImageView
+        android:id="@+id/h1ImageView"
+        android:layout_width="266.27dp"
+        android:layout_height="235dp"
+        android:src="@drawable/img_heart2"
+        android:layout_centerInParent="true"
+        android:alpha="1.0" />
+
+    <ImageView
+        android:id="@+id/h2ImageView"
+        android:layout_width="266.27dp"
+        android:layout_height="235dp"
+        android:src="@drawable/img_heart2"
+        android:layout_centerInParent="true"
+        android:alpha="1.0" />
+
+
+    <ImageView
+        android:id="@+id/heart2ImageView"
+        android:layout_width="266.27dp"
+        android:layout_height="235dp"
+        android:src="@drawable/img_heart2"
+        android:layout_centerInParent="true"
+        android:alpha="1.0" />
+
+    <ImageView
+        android:id="@+id/sunImageView"
+        android:layout_width="307.12dp"
+        android:layout_height="246.58dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="20dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_sun2" />
+
+    <ImageView
+        android:id="@+id/grassImageView"
+        android:layout_width="594.64dp"
+        android:layout_height="348.95dp"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_grass" />
+
+    <View
+        android:id="@+id/lineBottomImageView"
+        android:layout_width="match_parent"
+        android:layout_height="129dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background2" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>
