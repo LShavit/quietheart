@@ -19,7 +19,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onHeartClick(View view) {
+<<<<<<< HEAD
         Intent intent = new Intent(this, SecondActivity.class);
+=======
+        Intent intent = new Intent(this, FourthActivity.class);
+>>>>>>> 88706a12a60adeb406b59000ecc260abcc9e3c85
         startActivity(intent);
     }
 }

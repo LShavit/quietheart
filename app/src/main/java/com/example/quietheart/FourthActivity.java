@@ -1,5 +1,6 @@
 package com.example.quietheart;
 
+<<<<<<< HEAD
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,6 +10,12 @@ import android.widget.Button;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
+=======
+import android.net.Uri;
+import android.os.Bundle;
+import android.widget.MediaController;
+import android.widget.VideoView;
+>>>>>>> 88706a12a60adeb406b59000ecc260abcc9e3c85
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -25,6 +32,7 @@ public class FourthActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fourth);
 
+<<<<<<< HEAD
         videoView = findViewById(R.id.videoView1);
         buttonPlayPause = findViewById(R.id.buttonPlayPause);
         buttonNext = findViewById(R.id.buttonNext);
@@ -114,5 +122,26 @@ public class FourthActivity extends AppCompatActivity {
         } else {
             playVideo(1);
         }
+=======
+        // Получаем путь к видео из ресурсов res/raw
+        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.hand;
+
+        // Находим видео-вью в макете
+        VideoView videoView = findViewById(R.id.videoView);
+
+        // Устанавливаем путь к видеофайлу
+        Uri uri = Uri.parse(videoPath);
+        videoView.setVideoURI(uri);
+
+        // Создаем медиа-контроллер
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(videoView);
+
+        // Устанавливаем медиа-контроллер для видео-вью
+        videoView.setMediaController(mediaController);
+
+        // Начинаем воспроизведение видео
+        videoView.start();
+>>>>>>> 88706a12a60adeb406b59000ecc260abcc9e3c85
     }
 }
