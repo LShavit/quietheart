@@ -52,7 +52,7 @@
     <View
         android:id="@+id/lineBottomImageView"
         android:layout_width="match_parent"
-        android:layout_height="129dp"
+        android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:background="@drawable/background2" />
 
@@ -61,6 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:background="@color/green"
         app:menu="@menu/bottom_navigation_menu" />
 
 </RelativeLayout>

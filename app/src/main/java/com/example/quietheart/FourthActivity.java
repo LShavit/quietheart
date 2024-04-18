@@ -1,26 +1,118 @@
 package com.example.quietheart;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.Window;
-import android.widget.Toast;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.VideoView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class FourthActivity extends AppCompatActivity {
+
+    private VideoView videoView;
+    private Button buttonPlayPause;
+    private Button buttonNext;
+    private int currentVideo = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_third);
+        setContentView(R.layout.activity_fourth);
 
-        Window window = getWindow();
-        window.setStatusBarColor(getResources().getColor(R.color.blue));
+        videoView = findViewById(R.id.videoView1);
+        buttonPlayPause = findViewById(R.id.buttonPlayPause);
+        buttonNext = findViewById(R.id.buttonNext);
 
+        // Установка пути к начальному видео
+        playVideo(currentVideo);
 
+        // Установка обработчика нажатия на кнопку Play/Pause
+        buttonPlayPause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                togglePlayPause();
+            }
+        });
+
+        // Установка обработчика нажатия на кнопку Next
+        buttonNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playNextVideo();
+            }
+        });
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_view);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Intent intent;
+                if (item.getItemId() == R.id.action_third) {
+                    intent = new Intent(FourthActivity.this, ThirdActivity.class);
+                    startActivity(intent);
+                    return true;
+                } else if (item.getItemId() == R.id.action_fourth) {
+                    intent = new Intent(FourthActivity.this, FourthActivity.class);
+                    startActivity(intent);
+                    return true;
+                } else if (item.getItemId() == R.id.action_fifth) {
+                    intent = new Intent(FourthActivity.this, FifthActivity.class);
+                    startActivity(intent);
+                    return true;
+                } else if (item.getItemId() == R.id.action_six) {
+                    intent = new Intent(FourthActivity.this, SixActivity.class);
+                    startActivity(intent);
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        bottomNavigationView.getMenu().getItem(0).setChecked(false);
     }
 
-    private void showToast(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    // Метод для воспроизведения видео
+    private void playVideo(int videoIndex) {
+        // Останавливаем предыдущее видео, если оно играет
+        if (videoView.isPlaying()) {
+            videoView.stopPlayback();
+        }
+
+        // Устанавливаем новое видео
+        String videoPath = "android.resource://" + getPackageName() + "/raw/video" + videoIndex;
+        Uri uri = Uri.parse(videoPath);
+        videoView.setVideoURI(uri);
+
+        // Начинаем воспроизведение
+        videoView.start();
+
+        // Обновляем текущее видео
+        currentVideo = videoIndex;
+    }
+
+    // Метод для переключения между воспроизведением и паузой
+    public void togglePlayPause() {
+        if (videoView.isPlaying()) {
+            videoView.pause();
+            buttonPlayPause.setText("Play");
+        } else {
+            videoView.start();
+            buttonPlayPause.setText("Pause");
+        }
+    }
+
+    // Метод для переключения на следующее видео
+    public void playNextVideo() {
+        if (currentVideo == 1) {
+            playVideo(2);
+        } else {
+            playVideo(1);
+        }
     }
 }
-

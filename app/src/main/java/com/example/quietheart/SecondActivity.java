@@ -28,11 +28,20 @@ public class SecondActivity extends AppCompatActivity {
                     intent = new Intent(SecondActivity.this, ThirdActivity.class);
                     startActivity(intent);
                     return true;
-                } else if (item.getItemId() == R.id.action_fourth) {
+                } if (item.getItemId() == R.id.action_fourth) {
                     intent = new Intent(SecondActivity.this, FourthActivity.class);
                     startActivity(intent);
                     return true;
+                } if (item.getItemId() == R.id.action_fifth) {
+                    intent = new Intent(SecondActivity.this, FifthActivity.class);
+                    startActivity(intent);
+                    return true;
+                } if (item.getItemId() == R.id.action_six) {
+                    intent = new Intent(SecondActivity.this, SixActivity.class);
+                    startActivity(intent);
+                    return true;
                 }
+
                 return false;
             }
         });

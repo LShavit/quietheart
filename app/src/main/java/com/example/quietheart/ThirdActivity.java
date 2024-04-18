@@ -1,17 +1,20 @@
 package com.example.quietheart;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ThirdActivity extends AppCompatActivity {
 
@@ -76,6 +79,34 @@ public class ThirdActivity extends AppCompatActivity {
                 playAudio(mediaPlayer3, playButton3, mHandler3, timeTextView3, currentPosition3, isPaused3);
             }
         });
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_view);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Intent intent;
+                if (item.getItemId() == R.id.action_third) {
+                    intent = new Intent(ThirdActivity.this, ThirdActivity.class);
+                    startActivity(intent);
+                    return true;
+                } if (item.getItemId() == R.id.action_fourth) {
+                    intent = new Intent(ThirdActivity.this, FourthActivity.class);
+                    startActivity(intent);
+                    return true;
+                } if (item.getItemId() == R.id.action_fifth) {
+                    intent = new Intent(ThirdActivity.this, FifthActivity.class);
+                    startActivity(intent);
+                    return true;
+                } if (item.getItemId() == R.id.action_six) {
+                    intent = new Intent(ThirdActivity.this, SixActivity.class);
+                    startActivity(intent);
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        bottomNavigationView.getMenu().getItem(0).setChecked(false);
     }
 
     private void playAudio(MediaPlayer mediaPlayer, ImageView playButton, Handler handler, TextView timeTextView, int currentPosition, boolean isPaused) {

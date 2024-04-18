@@ -117,11 +117,10 @@
         android:text="00:00" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+        android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/background"
+        android:background="@color/green"
         app:menu="@menu/bottom_navigation_menu" />
-
 </RelativeLayout>
