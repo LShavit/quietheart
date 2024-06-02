@@ -15,16 +15,10 @@ public class FifthActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web);
 
-        // Находим WebView в макете
         WebView webView = findViewById(R.id.webView);
-
-        // Включаем поддержку JavaScript (если необходимо)
         webView.getSettings().setJavaScriptEnabled(true);
-
-        // Загружаем веб-страницу
         webView.loadUrl("https://dotadomination.kyiv.ua/");
 
-        // Находим BottomNavigationView в макете
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_view);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -53,5 +47,4 @@ public class FifthActivity extends AppCompatActivity {
 
         bottomNavigationView.getMenu().getItem(0).setChecked(false);
     }
-    }
-
+}
